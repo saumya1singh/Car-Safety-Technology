@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Registerscreen extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,6 +23,10 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
     private TextView topText,textU;
     private EditText userName, userPhone;
     private ConstraintLayout first, second;
+    FirebaseDatabase database ;
+    DatabaseReference myRef ;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,8 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
         getWindow().setStatusBarColor(Color.TRANSPARENT);*/
         setContentView(R.layout.activity_registerscreen);
 
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Driver Details");
         topText = findViewById(R.id.topText);
         pinView = findViewById(R.id.pinView);
         next = findViewById(R.id.button);
@@ -42,6 +50,7 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
         first.setVisibility(View.VISIBLE);
 
         next.setOnClickListener(this);
+
     }
 
     @Override
@@ -50,7 +59,8 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
         if (next.getText().equals("Let's go!")) {
             String name = userName.getText().toString();
             String phone = userPhone.getText().toString();
-
+            myRef.setValue(phone);
+            myRef.child(phone).setValue(name);
             if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone)) {
                 next.setText("Verify");
                 first.setVisibility(View.GONE);
@@ -67,7 +77,7 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
                 textU.setTextColor(Color.GREEN);
                 next.setText("Next");
 
-                Intent intent = new Intent(OnboardingActivity.this, Registerscreen.class);
+                Intent intent = new Intent(Registerscreen.this, BottomNavigation.class);
                 startActivity(intent);
             } else {
                 pinView.setLineColor(Color.RED);
