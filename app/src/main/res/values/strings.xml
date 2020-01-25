@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DetectMyDriver</string>
+
+
+    <string name="automatic_data">DRIVER DETECTION</string>
+    <string name="permission_title">Grant Access</string>
+    <string name="permission_detail">Give Music Player access to files</string>
+    <string name="choose_the_song">WARNING ALARM</string>
+    <string name="edit_data">DRIVER DOCUMENTS</string>
+    <string name="result_awesome">VERIFIED PROFILE</string>
+    <string name="continue_and_learn">Driver Monitoring System (DMS) monitors driver states while driving and alerts in real-time. It prevents accidents caused due to distracted driving and saves lives.</string>
+    <string name="continue_and_update">warning systems combine global positioning system (GPS)–based vehicle location information with speed data.</string>
+    <string name="continue_and_result">Secure Component Solutions Unit created to offer leading edge components and advanced technologies.</string>
+    <string name="thank_you">Thank you, have fun</string>
+    <string name="gm_finds_photos">Driver drowsiness, fatigue, and distraction at the wheel are often the cause of serious accidents worldwide.</string>
+    <string name="swap_to_the_tab">A warning device should be included to indicate that resetting is necessary, to cover the eventuality of temporary electrical failure.</string>
+    <string name="update_easily">There are no shortcuts to any place worth going.</string>
+    <string name="after_updating">our Profile is an advert for your work that you can share with your network.</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+</resources>
