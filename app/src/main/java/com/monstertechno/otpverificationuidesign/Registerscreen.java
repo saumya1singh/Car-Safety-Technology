@@ -2,8 +2,8 @@ package com.monstertechno.otpverificationuidesign;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -38,7 +38,7 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_registerscreen);
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Driver Details");
+        myRef = database.getReference();
         topText = findViewById(R.id.topText);
         pinView = findViewById(R.id.pinView);
         next = findViewById(R.id.button);
@@ -59,8 +59,11 @@ public class Registerscreen extends AppCompatActivity implements View.OnClickLis
         if (next.getText().equals("Let's go!")) {
             String name = userName.getText().toString();
             String phone = userPhone.getText().toString();
-            myRef.setValue(phone);
-            myRef.child(phone).setValue(name);
+ //           myRef.setValue(phone);
+      myRef=database.getReference(phone);
+            myRef.child("Name").setValue(name);
+
+        //    myRef.child(phone).setValue(name);
             if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone)) {
                 next.setText("Verify");
                 first.setVisibility(View.GONE);

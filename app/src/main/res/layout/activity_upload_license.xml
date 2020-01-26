@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".upload_license">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -14,11 +14,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Upload the Adhaar Card"
+            android:text="Upload the Adhaar Card:"
             android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="#000"
-            android:gravity="center"></TextView>
+            android:gravity="center">
+        </TextView>
 
         <Button
             android:id="@+id/upload1"
@@ -30,7 +31,8 @@
             android:textSize="20dp"
             android:background="#178FEE"
             android:layout_marginLeft="280dp"
-            android:layout_marginTop="60dp"></Button>
+            android:layout_marginTop="60dp">
+        </Button>
 
     </androidx.cardview.widget.CardView>
 
@@ -43,11 +45,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Upload Driving License Card"
+            android:text="Upload the Draving License\n Card:"
             android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="#000"
-            android:gravity="center"></TextView>
+            android:gravity="center">
+        </TextView>
 
         <Button
             android:id="@+id/upload2"
@@ -59,9 +62,15 @@
             android:textSize="20dp"
             android:background="#178FEE"
             android:layout_marginLeft="280dp"
-            android:layout_marginTop="80dp"></Button>
+            android:layout_marginTop="80dp">
+        </Button>
 
     </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 
 </RelativeLayout>
