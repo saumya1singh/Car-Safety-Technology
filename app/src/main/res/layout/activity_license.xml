@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFF7F9FA"
    >
 
     <LinearLayout
@@ -12,7 +13,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_marginTop="100dp"
-        android:background="#fff">
+        android:background="#FFC1DDF5">
 
 
         <ImageView
@@ -46,8 +47,8 @@
             android:textStyle="bold"
             android:textColor="#fff"
             android:background="#178FEE"
-            android:textSize="25dp"
-            android:layout_marginLeft="280dp">
+            android:textSize="20dp"
+            android:layout_marginLeft="220dp">
         </Button>
 
 
