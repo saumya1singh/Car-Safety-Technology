@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BottomNavigation"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:label="@string/title_activity_bottom_navigation">
 
         </activity>
@@ -27,7 +28,7 @@
 
         <activity
             android:name=".Registerscreen"
-            android:theme="@style/AppTheme.FullScreen"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
     </application>
 
 </manifest>
